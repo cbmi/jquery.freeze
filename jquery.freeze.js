@@ -1,12 +1,12 @@
 /*
- * jquery.freeze.js - 0.1.0
+ * jquery.freeze.js - 0.1.1
  * (c) 2013 Byron Ruth & The Children's Hospital of Philadelphia
  * jquery.freeze.js may be freely distributed under the BSD license
  */
 
 (function(root, factory) {
     if (typeof exports === 'object') {
-        module.exports = factory(exports.jQuery);
+        factory(exports.jQuery);
     } else if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else {
@@ -81,4 +81,5 @@
 
         return page.join('') + clone.html() + '</html>';
     };
+    return $;
 }));

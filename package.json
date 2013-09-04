@@ -1,6 +1,6 @@
 {
   "name": "jquery-freeze",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Byron Ruth <b@devel.io>",
   "description": "Freezes the state of the DOM and serializes as a string.",
   "license": "BSD",

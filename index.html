@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jquery.freeze by cbmi</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/cbmi/jquery.freeze">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/cbmi/jquery.freeze/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/cbmi/jquery.freeze/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>jquery.freeze</h1>
+          <p>Freeze the DOM</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/cbmi">cbmi</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="jqueryfreeze" class="anchor" href="#jqueryfreeze"><span class="octicon octicon-link"></span></a>jquery.freeze</h1>
+
+<p>jQuery extension for freezing the state of the DOM and serializing as a string. The original use of this was to capture the state of the screen for auditing purposes.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p><strong>Bower</strong></p>
+
+<div class="highlight"><pre>bower install jquery-freeze
+</pre></div>
+
+<p><strong>NPM</strong></p>
+
+<div class="highlight"><pre>npm install jquery-freeze
+</pre></div>
+
+<p><strong>Raw</strong></p>
+
+<div class="highlight"><pre>curl https://raw.github.com/cbmi/jquery.freeze/master/jquery.freeze.js
+</pre></div>
+
+<h2>
+<a name="include" class="anchor" href="#include"><span class="octicon octicon-link"></span></a>Include</h2>
+
+<p>As a script:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/path/to/jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/path/to/jquery.freeze.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Or as a AMD module:</p>
+
+<div class="highlight"><pre><span class="nx">require</span><span class="p">([</span><span class="s1">'jquery.freeze'</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="use" class="anchor" href="#use"><span class="octicon octicon-link"></span></a>Use</h2>
+
+<div class="highlight"><pre><span class="c1">// Bind to button or listen for a event, freeze the dom and send</span>
+<span class="c1">// a POST to log the document. The server-side could write the data</span>
+<span class="c1">// to an HTML file for later viewing.</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#freezer'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/screenlog/'</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">({</span><span class="nb">document</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">freeze</span><span class="p">()}));</span>
+<span class="p">});</span>
+</pre></div>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
